@@ -3,7 +3,7 @@ aside{
     top: 20vh;
     right: 2vw;
     width: 15vw;
-    height: 75vh;
+    height: auto;
     background-color: #89CFF0;
     border-radius: 2vmin;
 }

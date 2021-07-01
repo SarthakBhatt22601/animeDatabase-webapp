@@ -19,13 +19,13 @@ function App() {
   const GetTopAnime = async () =>{
     const temp = await fetch('https://api.jikan.moe/v3/top/anime/1/bypopularity').then(res => res.json());
 
-    setTopAnime(temp.top.slice(0, 10));
-    setAnimeList(temp.top.slice(0, 15));
+    setTopAnime(temp.top.slice(0, 20));
+    setAnimeList(temp.top.slice(0, 20));
   }
 
   const FetchAnime = async (query) =>{
     const api = 'https://api.jikan.moe/v3/search/anime?q=';
-    const api_format = '&order_by=title&sort=asc&limit=15';
+    const api_format = '&order_by=title&sort=asc&page=1&limit=20';
     const url = api + query + api_format; 
     const temp = await fetch(url).then(res => res.json()).then(data => data.results);
 
@@ -37,7 +37,7 @@ function App() {
     if(!search)
       alert("Can't search blank field");
     else
-      FetchAnime(search);
+      FetchAnime(search);  
     setSearch("");  
   }
 

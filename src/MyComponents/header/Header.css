@@ -1,13 +1,13 @@
 nav{
     background-color: #89CFF0;
-    height: 10vh;
+    height: 8vh;
 }
 
 nav h1{
     float: left;
     margin: 5px 0 0 10px;
     color: white;
-    font-size: 7vmin;
+    font-size: 6vmin;
     font-family: 'Arvo', serif;
     font-weight: lighter;
     margin-left: 3vw;
@@ -24,7 +24,7 @@ nav p{
     margin-right: 2vw;
     color: white;
     font-family: 'Arvo', serif;
-    font-size: 3vmin;
+    font-size: 2.5vmin;
     font-weight: bold;
 }
 

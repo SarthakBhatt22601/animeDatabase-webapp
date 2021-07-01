@@ -27,5 +27,5 @@ export default function Main(props) {
 }
 
 Main.propTypes = {
-    string: PropTypes.string,
+    search: PropTypes.string,
 }

@@ -1,0 +1,33 @@
+nav{
+    background-color: #89CFF0;
+    height: 10vh;
+}
+
+nav h1{
+    float: left;
+    margin: 5px 0 0 10px;
+    color: white;
+    font-size: 7vmin;
+    font-family: 'Arvo', serif;
+    font-weight: lighter;
+    margin-left: 3vw;
+}
+
+span{
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+}
+
+nav p{
+    float: right;
+    margin-right: 2vw;
+    color: white;
+    font-family: 'Arvo', serif;
+    font-size: 3vmin;
+    font-weight: bold;
+}
+
+nav p:hover{
+    color: black;
+}

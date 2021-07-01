@@ -1,0 +1,14 @@
+.anime-card img{
+    width: 10vw;
+    border-radius: 2vmin;
+}
+
+.anime-card img:hover{
+    box-shadow: 0 0 15px #888888;
+}
+
+.anime-card h2{
+    font-size: 2vmin;
+    padding: 1.5vmin;
+    color: black;
+}

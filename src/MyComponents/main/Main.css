@@ -19,6 +19,16 @@
     background-color: #89CFF0;
 }
 
+.search-bar select{
+    padding: 0.5vw;
+    margin-left: 3vmin;
+    font-size: 0.9vmax;
+    border-radius: 2vmin;
+    background-color: #E0FFFF;
+    border: none;
+    outline: none;
+}
+
 .search-bar button{
     margin-left: 3vmin;
     color: white;

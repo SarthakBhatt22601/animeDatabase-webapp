@@ -15,6 +15,7 @@ function App() {
   const [animeList, setAnimeList] = useState([]);
   const [topAnime, setTopAnime] = useState([]);
   const [search, setSearch] = useState("");
+  const [type, setType] = useState("anime");
 
   const GetTopAnime = async () =>{
     const temp = await fetch('https://api.jikan.moe/v3/top/anime/1/bypopularity').then(res => res.json());
@@ -23,10 +24,10 @@ function App() {
     setAnimeList(temp.top.slice(0, 20));
   }
 
-  const FetchAnime = async (query) =>{
-    const api = 'https://api.jikan.moe/v3/search/anime?q=';
+  const FetchAnime = async (query,type) =>{
+    const api = 'https://api.jikan.moe/v3/search/';
     const api_format = '&order_by=title&sort=asc&page=1&limit=20';
-    const url = api + query + api_format; 
+    const url = api + type + '?q=' + query + api_format; 
     const temp = await fetch(url).then(res => res.json()).then(data => data.results);
 
     setAnimeList(temp);
@@ -37,7 +38,7 @@ function App() {
     if(!search)
       alert("Can't search blank field");
     else
-      FetchAnime(search);  
+      FetchAnime(search,type);  
     setSearch("");  
   }
 
@@ -54,7 +55,7 @@ function App() {
         </Route>
         <Route exact path="/">
           <Sidebar topAnime={topAnime} />
-          <Main HandleSearch={HandleSearch} search={search} setSearch={setSearch} animeList={animeList} />
+          <Main HandleSearch={HandleSearch} search={search} type={type} setType={setType} setSearch={setSearch} animeList={animeList} />
         </Route>
       </Switch>
     </Router>
